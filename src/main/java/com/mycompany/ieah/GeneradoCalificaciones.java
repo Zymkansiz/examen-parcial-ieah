@@ -26,26 +26,3 @@ public class GeneradoCalificaciones {
     }
  
 }
-
-
-
-
-
-
-
-
-
-
-
-public class Insertar {
-    public static void main(String args[]){
-    SessionFactory sesion=    NewHibernateUtil.getSessionFactory();
-  Session mala=  sesion.openSession();
-  Transaction t=mala.beginTransaction();
-  
-                 mala.save(new Trabajador("juan", "campos", "martinez"));
-             t.commit();
-                 sesion.close();
-                 System.out.println("Se ha guardado este trabajadorcito");
-    }
-}
